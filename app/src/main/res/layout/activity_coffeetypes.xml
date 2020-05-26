@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <LinearLayout android:background="@drawable/background"
+    tools:context="com.example.justjava.coffeetypes"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:showDividers="middle"
+    android:divider="@drawable/empty_tall_divider">
+
+    <Button
+        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:text="Espresso - \u20B990"
+        android:id="@+id/button1"
+        android:background="#80FFFFFF"
+        android:layout_gravity="center"
+        android:onClick="esOrder"/>
+
+    <Button
+        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:text="Latte - \u20B9100"
+        android:id="@+id/button2"
+        android:background="#80FFFFFF"
+        android:layout_gravity="center"
+        android:onClick="laOrder"/>
+
+    <Button
+        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:text="Cappuccino - \u20B995"
+        android:id="@+id/button3"
+        android:background="#80FFFFFF"
+        android:layout_gravity="center"
+        android:onClick="caOrder"/>
+
+    <Button
+        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:text="Mocha - \u20B9100"
+        android:id="@+id/button4"
+        android:background="#80FFFFFF"
+        android:layout_gravity="center"
+        android:onClick="mOrder"/>
+
+    <Button
+        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:text="Long Black - \u20B970"
+        android:id="@+id/button5"
+        android:background="#80FFFFFF"
+        android:layout_gravity="center"
+        android:onClick="lbOrder"/>
+
+</LinearLayout>

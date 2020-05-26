@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Just Java</string>
+    <string name="summary"> <u>ORDER SUMMARY</u> </string>
+    <string name="select"> Select your beverage </string>
+</resources>

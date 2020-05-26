@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/latte"
+    android:gravity="top"
+    >
+
+    <TextView
+        android:id="@+id/cafe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="100sp"
+        android:text="Cafe 'Le Poste"
+        android:textColor="#fffaf0"
+        android:fontFamily="sans-serif-light"
+        />
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open 24*7"
+        android:textColor="#fffaf0"
+        android:layout_below="@id/cafe"
+        android:textSize="20sp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="350dp"
+        android:text="Next"
+        android:background="#fff"
+        android:layout_alignParentRight="true"
+        android:onClick="next"/>
+</RelativeLayout>
