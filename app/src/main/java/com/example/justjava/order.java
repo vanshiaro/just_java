@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.content.Intent;
 import java.text.NumberFormat;
+import java.util.HashMap;
 import java.util.Locale;
 
 /**
@@ -45,6 +46,7 @@ public class order extends AppCompatActivity {
      */
 
     public void submitOrder(View view) {
+
         if(quantity>0) {
             int price,total;
             String s = "orderEsCoffee";

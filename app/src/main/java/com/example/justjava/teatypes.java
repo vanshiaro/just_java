@@ -51,7 +51,7 @@ public class teatypes extends AppCompatActivity{
     public void ttOrder(View view){
         Intent i= new Intent(this,order.class);
         String message = "orderTT";
-        beverage = new Beverage(message,100);
+       beverage = new Beverage(message,100);
         i.putExtra(status,beverage);
         startActivity(i);
     }
