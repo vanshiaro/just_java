@@ -8,8 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class teatypes extends AppCompatActivity{
     public static final String status ="com.example.JustJava.MESSAGE";
+    Beverage beverage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,31 +23,36 @@ public class teatypes extends AppCompatActivity{
     public void gtOrder(View view){
         Intent i= new Intent(this,order.class);
         String message = "orderGT";
-        i.putExtra(status,message);
+        beverage = new Beverage(message,50);
+        i.putExtra(status,beverage);
         startActivity(i);
     }
     public void btOrder(View view){
         Intent i= new Intent(this,order.class);
         String message = "orderBT";
-        i.putExtra(status,message);
+        beverage = new Beverage(message,30);
+        i.putExtra(status,beverage);
         startActivity(i);
     }
     public void htOrder(View view){
         Intent i= new Intent(this,order.class);
         String message = "orderHT";
-        i.putExtra(status,message);
+        beverage = new Beverage(message,50);
+        i.putExtra(status,beverage);
         startActivity(i);
     }
     public void ctOrder(View view){
         Intent i= new Intent(this,order.class);
         String message = "orderCT";
-        i.putExtra(status,message);
+        beverage = new Beverage(message,80);
+        i.putExtra(status,beverage);
         startActivity(i);
     }
     public void ttOrder(View view){
         Intent i= new Intent(this,order.class);
         String message = "orderTT";
-        i.putExtra(status,message);
+        beverage = new Beverage(message,100);
+        i.putExtra(status,beverage);
         startActivity(i);
     }
 }

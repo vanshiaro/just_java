@@ -20,11 +20,17 @@ import java.util.Locale;
  */
 public class order extends AppCompatActivity {
     int quantity=0;
+    String message="";
+    Beverage beverage;
+    Order order;
     public static final String status = "com.example.justjava.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
+        Intent i = getIntent();
+        //message = i.getStringExtra(coffeetypes.status);
+        beverage = (Beverage)i.getSerializableExtra(coffeetypes.status);
     }
     /**
      * This method displays the given text on the screen.
@@ -37,11 +43,10 @@ public class order extends AppCompatActivity {
     /**
      * This method is called when the order button is clicked.
      */
+
     public void submitOrder(View view) {
         if(quantity>0) {
             int price,total;
-            Intent i = getIntent();
-            String message = i.getStringExtra(coffeetypes.status);
             String s = "orderEsCoffee";
             String s1 = "orderLaCoffee";
             String s2 = "orderCaCoffee";
@@ -53,106 +58,97 @@ public class order extends AppCompatActivity {
             String s8 = "orderCT";
             String s9 = "orderTT";
             //String s1 = "orderTea";
-            if (message.equals(s)) {
+            if (beverage.getId().equals(s)) {
                 //String count="Items count: "+quantity;
-                price = 90;
+                price = beverage.getPrice();
                 total = quantity * price;
                 String priceMessage = "Total: \u20B9" + total + "\nThank you!";
+                order = new Order(beverage.getName(),quantity,beverage.getPrice(),total);
                 displayMessage(priceMessage);
-                Intent intent = new Intent(this, orderSummary.class);
-                String code = "code"
-                intent.putExtra(status,);
-                startActivity(intent);
+
             }
-            if (message.equals(s1)) {
+            if (beverage.getId().equals(s1)) {
                 //String count="Items count: "+quantity;
-                price = 100;
+                price = beverage.getPrice();
                 total = quantity * price;
                 String priceMessage = "Total: \u20B9" + total + "\nThank you!";
+                order = new Order(beverage.getName(),quantity,beverage.getPrice(),total);
                 displayMessage(priceMessage);
-                Intent intent = new Intent(this, orderSummary.class);
-                intent.putExtra(status,s1);
-                startActivity(intent);
+
             }
-            if (message.equals(s2)) {
+            if (beverage.getId().equals(s2)) {
                 //String count="Items count: "+quantity;
-                price = 95;
+                price = beverage.getPrice();
                 total = quantity * price;
                 String priceMessage = "Total: \u20B9" + total + "\nThank you!";
+                order = new Order(beverage.getName(),quantity,beverage.getPrice(),total);
                 displayMessage(priceMessage);
-                Intent intent = new Intent(this, orderSummary.class);
-                intent.putExtra(status,s2);
-                startActivity(intent);
+
             }
-            if (message.equals(s3)) {
+            if (beverage.getId().equals(s3)) {
                 //String count="Items count: "+quantity;
-                price = 100;
+                price = beverage.getPrice();
                 total = quantity * price;
                 String priceMessage = "Total: \u20B9" + total + "\nThank you!";
+                order = new Order(beverage.getName(),quantity,beverage.getPrice(),total);
                 displayMessage(priceMessage);
-                Intent intent = new Intent(this, orderSummary.class);
-                intent.putExtra(status,s3);
-                startActivity(intent);
+
+
             }
-            if (message.equals(s4)) {
+            if (beverage.getId().equals(s4)) {
                 //String count="Items count: "+quantity;
-                price = 70;
+                price = beverage.getPrice();
                 total = quantity * price;
                 String priceMessage = "Total: \u20B9" + total + "\nThank you!";
+                order = new Order(beverage.getName(),quantity,beverage.getPrice(),total);
                 displayMessage(priceMessage);
-                Intent intent = new Intent(this, orderSummary.class);
-                intent.putExtra(status,s4);
-                startActivity(intent);
+
+
             }
-            if (message.equals(s5)) {
+            if (beverage.getId().equals(s5)) {
                 //String count="Items count: "+quantity;
-                price = 50;
+                price = beverage.getPrice();
                 total = quantity * price;
                 String priceMessage = "Total: \u20B9" + total + "\nThank you!";
+                order = new Order(beverage.getName(),quantity,beverage.getPrice(),total);
                 displayMessage(priceMessage);
-                Intent intent = new Intent(this, orderSummary.class);
-                intent.putExtra(status,s5);
-                startActivity(intent);
+
+
             }
-            if (message.equals(s6)) {
+            if (beverage.getId().equals(s6)) {
                 //String count="Items count: "+quantity;
-                price = 30;
+                price = beverage.getPrice();
                 total = quantity * price;
                 String priceMessage = "Total: \u20B9" + total + "\nThank you!";
+                order = new Order(beverage.getName(),quantity,beverage.getPrice(),total);
                 displayMessage(priceMessage);
-                Intent intent = new Intent(this, orderSummary.class);
-                intent.putExtra(status,s6);
-                startActivity(intent);
+
+
             }
-            if (message.equals(s7)) {
+            if (beverage.getId().equals(s7)) {
                 //String count="Items count: "+quantity;
-                price = 50;
+                price = beverage.getPrice();
                 total = quantity * price;
                 String priceMessage = "Total: \u20B9" + total + "\nThank you!";
+                order = new Order(beverage.getName(),quantity,beverage.getPrice(),total);
                 displayMessage(priceMessage);
-                Intent intent = new Intent(this, orderSummary.class);
-                intent.putExtra(status,s7);
-                startActivity(intent);
+
             }
-            if (message.equals(s8)) {
+            if (beverage.getId().equals(s8)) {
                 //String count="Items count: "+quantity;
-                price = 80;
+                price = beverage.getPrice();
                 total = quantity * price;
                 String priceMessage = "Total: \u20B9" + total + "\nThank you!";
+                order = new Order(beverage.getName(),quantity,beverage.getPrice(),total);
                 displayMessage(priceMessage);
-                Intent intent = new Intent(this, orderSummary.class);
-                intent.putExtra(status,s8);
-                startActivity(intent);
             }
-            if (message.equals(s9)) {
+            if (beverage.getId().equals(s9)) {
                 //String count="Items count: "+quantity;
-                price = 100;
+                price = beverage.getPrice();
                 total = quantity * price;
                 String priceMessage = "Total: \u20B9" + total + "\nThank you!";
+                order = new Order(beverage.getName(),quantity,beverage.getPrice(),total);
                 displayMessage(priceMessage);
-                Intent intent = new Intent(this, orderSummary.class);
-                intent.putExtra(status,s9);
-                startActivity(intent);
             }
         }
         else {
@@ -189,7 +185,7 @@ public class order extends AppCompatActivity {
      */
     private void display(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(String.valueOf(number));
 
     }
     /**
@@ -202,8 +198,9 @@ public class order extends AppCompatActivity {
      **/
     public void continueOrder(View view){
         if(quantity>0) {
-            Intent i = new Intent(order.this, orderSummary.class);
-            startActivity(i);
+            Intent intent = new Intent(this, orderSummary.class);
+            intent.putExtra(status,order);
+            startActivity(intent);
         }
     }
 }
