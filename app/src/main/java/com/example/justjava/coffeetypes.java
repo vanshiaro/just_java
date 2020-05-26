@@ -30,14 +30,14 @@ public class coffeetypes extends AppCompatActivity  {
     public void laOrder(View view){
         Intent i= new Intent(this,order.class);
         String message = "orderLaCoffee";
-        Beverage beverage = new Beverage(message,90);
+        Beverage beverage = new Beverage(message,100);
         i.putExtra(status,beverage);
         startActivity(i);
     }
     public void caOrder(View view) {
         Intent i = new Intent(this, order.class);
         String message = "orderCaCoffee";
-        Beverage beverage = new Beverage(message,90);
+        Beverage beverage = new Beverage(message,95);
         i.putExtra(status, beverage);
         startActivity(i);
     }
@@ -45,14 +45,14 @@ public class coffeetypes extends AppCompatActivity  {
         Intent i= new Intent(this,order.class);
 
         String message = "orderMoCoffee";
-        Beverage beverage = new Beverage(message,90);
+        Beverage beverage = new Beverage(message,100);
         i.putExtra(status, beverage);
         startActivity(i);
     }
     public void lbOrder(View view){
         Intent i= new Intent(this,order.class);
         String message = "orderLbCoffee";
-        Beverage beverage = new Beverage(message,90);
+        Beverage beverage = new Beverage(message,70);
         i.putExtra(status, beverage);
         startActivity(i);
     }
