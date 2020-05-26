@@ -31,7 +31,7 @@ public class coffeetypes extends AppCompatActivity  {
         Intent i= new Intent(this,order.class);
         String message = "orderLaCoffee";
         Beverage beverage = new Beverage(message,90);
-        i.putExtra(status,message);
+        i.putExtra(status,beverage);
         startActivity(i);
     }
     public void caOrder(View view) {
